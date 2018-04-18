@@ -16,3 +16,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+MIDDLEWARE.append('spa.middleware.SPAMiddleware')
+STATICFILES_STORAGE = 'spa.storage.SPAStaticFilesStorage'
+STATIC_ROOT = '/app/static'
